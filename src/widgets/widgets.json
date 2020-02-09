@@ -4,6 +4,5 @@
   "description": "指标控件配置",
   "author": "FreezeSoul<freezesoul@gmail.com>",
   "widgets": [
-    { "group": "测试", "tag": "Test", "path": "widget", "enable": false }
   ]
 }

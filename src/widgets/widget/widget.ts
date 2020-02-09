@@ -4,13 +4,12 @@ import { WidgetInterface } from "@interfaces/widgetInterface";
 import { ApiPageInterface } from "@interfaces/apiPageInterface";
 import { ApiWidgetInterface } from "@interfaces/apiWidgetInterface";
 
-//import * as $ from "jquery";
+//import * as a from "module";
 //import templateString from "./assets/template.html";
 import "./assets/widget.less";
 
 export default class WidgetSimple implements WidgetInterface {
   pageApi: ApiPageInterface;
-
   widgetApi: ApiWidgetInterface;
 
   _option: any = {
@@ -30,7 +29,7 @@ export default class WidgetSimple implements WidgetInterface {
 
   private templateString: string;
 
-  private $: any;
+  private amdModule: any;
 
   public async init(container: HTMLElement) {
     this.container = container;
@@ -38,10 +37,11 @@ export default class WidgetSimple implements WidgetInterface {
       await import(/* webpackChunkName: "template" */ "./assets/template.html")
     ).default;
     return await new Promise(resolve => {
-      System.import("jquery").then(($: any) => {
-        this.$ = $;
+      /*System.import("amdModule").then((amdModule: any) => {
+        this.amdModule = amdModule;
         resolve();
-      });
+      });*/
+      resolve();
     });
   }
 
@@ -59,7 +59,7 @@ export default class WidgetSimple implements WidgetInterface {
   }
 
   public render() {
-    this.$(this.container).html(this.templateString);
+    $(this.container).html(this.templateString);
   }
 
   public resize() {}
