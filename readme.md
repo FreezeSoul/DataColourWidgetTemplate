@@ -920,3 +920,76 @@ npm run build-widget:pro -- --name=部件名称
 ```shell
 http-server -p 8088
 ```
+
+### 7. 使用集成开发工具
+
+使用集成开发工具datacolour-cli开发更简单
+
+安装nginx
+注:根据不同操作系统设置nginx全局访问环境变量，要求在任意目录可做如下访问
+
+```shell
+nginx -v
+```
+
+全局安装cli
+
+```shell
+npm install -g datacolour-cli
+datacolour-cli -h
+```
+
+#### 创建本地部件项目
+
+```shell
+datacolour-cli init 项目名称
+```
+
+在这创建项目后按要求输入部件信息，创建一个部件
+
+#### 创建一个部件
+
+在部件项目目录中输入如下命令，并按要求输入部件信息
+
+```shell
+datacolour-cli create
+```
+
+#### 调试一个部件
+
+在部件项目目录中输入如下命令，并按要求输入部件标识(ID)
+
+```shell
+datacolour-cli debug
+```
+
+启动浏览器，打开地址测试地址 http://127.0.0.1:9999
+
+```shell
+/opt/google/chrome/chrome --disable-web-security --user-data-dir=/tmp/chrome_tmp
+```
+
+#### 发布一个部件
+
+在部件项目目录中输入如下命令，并按要求输入部件标识(ID)，发布后的部件即在dist目录下
+
+```shell
+datacolour-cli build
+```
+
+#### 更多说明
+
+```shell
+Usage: datacolour-cli [options] [command]
+
+Options:
+  -v, --version  output the version number
+  -h, --help     output usage information
+
+Commands:
+  init <name>    初始化Widget项目
+  list           列出所有Widget
+  create         创建一个Widget
+  debug          调试一个Widget
+  build          发布一个Widget
+```
