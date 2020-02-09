@@ -925,13 +925,6 @@ http-server -p 8088
 
 使用集成开发工具datacolour-cli开发更简单
 
-安装nginx
-注:根据不同操作系统设置nginx全局访问环境变量，要求在任意目录可做如下访问
-
-```shell
-nginx -v
-```
-
 全局安装cli
 
 ```shell
