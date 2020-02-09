@@ -1,0 +1,9 @@
+{
+  "id": "widget",
+  "name": "测试控件",
+  "icon": "assets/widget.png",
+  "author": "FreezeSoul<freezesoul@gmail.com>",
+  "version": "0.1.0",
+  "description": "测试控件描述",
+  "bootstrap": "bootstrap.js"
+}

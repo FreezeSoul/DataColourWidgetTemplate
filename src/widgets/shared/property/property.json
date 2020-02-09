@@ -1,0 +1,17 @@
+[
+  {
+    "name": "属性设置",
+    "type": "properties",
+    "children": []
+  },
+  {
+    "name": "数据绑定",
+    "type": "bindings",
+    "children": []
+  },
+  {
+    "name": "交互事件",
+    "type": "events",
+    "children": []
+  }
+]

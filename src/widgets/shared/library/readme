@@ -1,0 +1,1 @@
+这里主要是存放低一层级的共享库，建议通过npm安装，导入依赖时使用SystemJs，结合ApiPageInterface的getWidgetsPath()方法获取到的widgets根目录进行导入。

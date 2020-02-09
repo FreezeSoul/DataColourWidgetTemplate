@@ -1,0 +1,205 @@
+[
+  {
+    "name": "属性设置",
+    "type": "properties",
+    "children": [
+      {
+        "name": "基本",
+        "type": "group",
+        "children": [
+          {
+            "name": "文本测试",
+            "type": "text",
+            "default": "文本默认值",
+            "link": "test.text",
+            "tooltip": "文本测试提示"
+          },
+          {
+            "name": "多行文本测试",
+            "type": "textarea",
+            "default": "多行文本默认值",
+            "link": "test.textarea",
+            "tooltip": "多行文本测试提示"
+          },
+          {
+            "name": "数值测试",
+            "type": "number",
+            "default": 0,
+            "link": "test.number",
+            "tooltip": "数值测试提示"
+          },
+          {
+            "name": "布尔值测试",
+            "type": "boolean",
+            "default": false,
+            "link": "test.boolean",
+            "tooltip": "布尔值测试提示"
+          },
+          {
+            "name": "颜色测试",
+            "type": "color",
+            "default": "#FFFFFF",
+            "link": "test.color",
+            "tooltip": "颜色测试提示"
+          },
+          {
+            "name": "颜色多值测试",
+            "type": "colors",
+            "default": [
+              "#FE8463",
+              "#9BCA63",
+              "#FAD860",
+              "#60C0DD",
+              "#0084C6",
+              "#D7504B",
+              "#C6E579",
+              "#26C0C0",
+              "#F0805A",
+              "#F4E001",
+              "#B5C334"
+            ],
+            "link": "test.colors",
+            "tooltip": "颜色多值测试提示"
+          },
+          {
+            "name": "资源测试",
+            "type": "resource",
+            "default": "",
+            "link": "test.resource",
+            "extension": ["png", "jpg", "gif", "bmp"],
+            "tooltip": "资源测试提示"
+          },
+          {
+            "name": "多值测试",
+            "type": "multiple",
+            "default": [0, 0, "0", "0"],
+            "link": "test.multiple",
+            "tooltip": "多值测试提示"
+          },
+          {
+            "name": "单选框测试",
+            "type": "radio",
+            "data": [
+              {
+                "value": "value1",
+                "text": "条目一"
+              },
+              {
+                "value": "value2",
+                "text": "条目二"
+              },
+              {
+                "value": "value3",
+                "text": "条目三"
+              }
+            ],
+            "default": "value1",
+            "link": "test.radio",
+            "tooltip": "单选框测试提示"
+          },
+          {
+            "name": "复选框测试",
+            "type": "check",
+            "data": [
+              {
+                "value": "value1",
+                "text": "条目一"
+              },
+              {
+                "value": "value2",
+                "text": "条目二"
+              },
+              {
+                "value": "value3",
+                "text": "条目三"
+              }
+            ],
+            "default": ["value1"],
+            "link": "test.check",
+            "tooltip": "复选框测试提示"
+          },
+          {
+            "name": "下拉测试",
+            "type": "select",
+            "data": [
+              {
+                "value": "value1",
+                "text": "条目一"
+              },
+              {
+                "value": "value2",
+                "text": "条目二"
+              },
+              {
+                "value": "value3",
+                "text": "条目三"
+              }
+            ],
+            "default": "value1",
+            "link": "test.select",
+            "tooltip": "数值测试提示"
+          },
+          {
+            "name": "数组设置",
+            "type": "array",
+            "link": "test.array",
+            "tooltip": "多值测试提示",
+            "readonly": false,
+            "children": [
+              {
+                "name": "文本测试",
+                "type": "text",
+                "default": "文本默认值",
+                "link": "text",
+                "tooltip": "文本测试提示"
+              },
+              {
+                "name": "数值测试",
+                "type": "number",
+                "default": 0,
+                "link": "number",
+                "tooltip": "数值测试提示"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "数据绑定",
+    "type": "bindings",
+    "children": [
+      {
+        "name": "序列绑定名称",
+        "type": "seriesBinding",
+        "tooltip": "序列绑定提示"
+      },
+      {
+        "name": "文本绑定名称",
+        "type": "textBinding",
+        "tooltip": "文本绑定提示"
+      },
+      {
+        "name": "列表绑定名称",
+        "type": "listBinding",
+        "tooltip": "列表绑定提示"
+      }
+    ]
+  },
+  {
+    "name": "交互事件",
+    "type": "events",
+    "children": [
+      {
+        "name": "事件名称",
+        "tooltip": "事件名称提示"
+      }
+    ]
+  },
+  {
+    "name": "导入配置",
+    "type": "imports",
+    "children": ["shared/property/property.json"]
+  }
+]

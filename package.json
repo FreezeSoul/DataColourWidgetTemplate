@@ -1,0 +1,44 @@
+{
+  "name": "datacolour-module",
+  "version": "1.0.0",
+  "description": "DataColour Module Template",
+  "scripts": {
+    "build-widget:dev": "webpack --mode=development --config=webpack.config.widget.js",
+    "build-widget:pro": "webpack --mode=production --config=webpack.config.widget.js",
+    "start-widget": "webpack-dev-server --mode=development --progress --colors --config=webpack.config.widget.js --open"
+  },
+  "keywords": [],
+  "author": "FreezeSoul",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.2.17",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^12.12.24",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.1.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.4.2",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.1.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2",
+    "webpack-obfuscator": "^0.18.8"
+  }
+}

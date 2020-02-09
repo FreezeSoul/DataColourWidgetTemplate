@@ -1,0 +1,15 @@
+{
+  "imports": {
+    "d3": "./shared/library/node_modules/d3/dist/d3.min.js",
+    "g2": "./shared/library/node_modules/@antv/g2/build/g2.js",
+    "g6": "./shared/library/node_modules/@antv/g6/build/g6.js",
+    "three": "./shared/library/node_modules/three/build/three.min.js",
+    "raphael": "./shared/library/node_modules/raphael/raphael.min.js",
+    "echarts": "./shared/library/node_modules/echarts/dist/echarts.min.js",
+    "createjs": "./shared/library/node_modules/createjs/builds/1.0.0/createjs.min.js",
+    "highcharts": "./shared/library/node_modules/highcharts/highcharts.js",
+    "highcharts-more": "./shared/library/node_modules/highcharts/highcharts-more.js",
+    "echarts-gl": "./shared/library/node_modules/echarts-gl/dist/echarts-gl.min.js",
+    "rekapi": "./shared/library/node_modules/rekapi/dist/rekapi.js"
+  }
+}
