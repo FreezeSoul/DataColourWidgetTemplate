@@ -962,18 +962,26 @@ datacolour-cli debug
 /opt/google/chrome/chrome --disable-web-security --user-data-dir=/tmp/chrome_tmp
 ```
 
-#### 发布一个部件
+#### 构建一个部件
 
-在部件项目目录中输入如下命令，并按要求输入部件标识(ID)，发布后的部件即在dist目录下
+在部件项目目录中输入如下命令，并按要求输入部件标识(ID)，构建后的部件即在dist目录下
 
 ```shell
 datacolour-cli build
 ```
 
+#### 发布一个部件
+
+在部件项目目录中输入如下命令，并按要求输入部件标识(ID)，发布后会提交部件至部件管理中心做统一上线处理
+
+```shell
+datacolour-cli publish
+```
+
 #### 更多说明
 
 ```shell
-Usage: datacolour-cli [options] [command]
+Usage: index [options] [command]
 
 Options:
   -v, --version  output the version number
@@ -984,5 +992,6 @@ Commands:
   list           列出所有Widget
   create         创建一个Widget
   debug          调试一个Widget
-  build          发布一个Widget
+  build          构建一个Widget
+  publish        发布一个Widget
 ```
