@@ -11,7 +11,7 @@ const SRC_ROOT = path.resolve(__dirname, "src");
 const DIST_ROOT = path.resolve(__dirname, "dist");
 
 module.exports = (env, argv) => {
-  console.log(argv.mode);
+  //console.log(argv.mode);
   const config = {
     context: SRC_ROOT,
     devServer: {

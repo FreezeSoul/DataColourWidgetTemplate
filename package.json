@@ -5,7 +5,7 @@
   "scripts": {
     "build-widget:dev": "webpack --mode=development --config=webpack.config.widget.js",
     "build-widget:pro": "webpack --mode=production --config=webpack.config.widget.js",
-    "start-widget": "webpack-dev-server --mode=development --progress --colors --config=webpack.config.widget.js --open"
+    "start-widget": "webpack-dev-server --mode=development --progress --colors --config=webpack.config.widget.js"
   },
   "keywords": [],
   "author": "FreezeSoul",

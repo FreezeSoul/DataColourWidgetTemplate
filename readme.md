@@ -950,21 +950,26 @@ datacolour-cli create
 
 #### 调试一个部件
 
-在部件项目目录中输入如下命令，并按要求输入部件标识(ID)
+在部件项目目录中输入如下命令，并按要求选择一个部件
 
 ```shell
 datacolour-cli debug
 ```
 
-启动浏览器，打开地址测试地址 http://127.0.0.1:9999
+启动浏览器(禁用CORS)，打开地址测试地址 http://127.0.0.1:9999
 
 ```shell
+#window
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir=~/chrome_tmp
+#linux
 /opt/google/chrome/chrome --disable-web-security --user-data-dir=/tmp/chrome_tmp
+#osx
+open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --disable-web-security --user-data-dir="/tmp/chrome_tmp"
 ```
 
 #### 构建一个部件
 
-在部件项目目录中输入如下命令，并按要求输入部件标识(ID)，构建后的部件即在dist目录下
+在部件项目目录中输入如下命令，并按要求选择一个部件，构建后的部件即在dist目录下
 
 ```shell
 datacolour-cli build
@@ -972,7 +977,7 @@ datacolour-cli build
 
 #### 发布一个部件
 
-在部件项目目录中输入如下命令，并按要求输入部件标识(ID)，发布后会提交部件至部件管理中心做统一上线处理
+在部件项目目录中输入如下命令，并按要求选择一个部件，发布后会提交部件至部件管理中心做统一上线处理
 
 ```shell
 datacolour-cli publish
