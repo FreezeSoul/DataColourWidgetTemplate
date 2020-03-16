@@ -1,1 +1,1 @@
-# 小部件开发说明  请访问官网：www.datacolour.cn 文档中心
+# 小部件开发说明  请访问官网：doc.datacolour.cn 文档中心
