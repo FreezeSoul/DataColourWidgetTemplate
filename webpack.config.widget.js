@@ -2,7 +2,7 @@ const path = require("path");
 
 const CopyPlugin = require("copy-webpack-plugin");
 
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const baseConfig = require("./webpack.config.base.js");
 
 const SRC_ROOT = path.resolve(__dirname, "src");

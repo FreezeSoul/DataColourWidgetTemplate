@@ -28,6 +28,13 @@ export interface ApiWidgetInterface {
    */
   hideWidget();
 
+   /**
+   * @description 获取部件HTMLDOM对象
+   * @returns {HTMLElement}
+   * @memberof ApiWidgetInterface
+   */
+  getElement(): HTMLElement;
+
   /**
    * @description 获取页面对象
    * @returns {ApiPageInterface}
@@ -48,7 +55,7 @@ export interface ApiWidgetInterface {
    * @memberof ApiWidgetInterface
    */
   getWidgetPath(): string;
-  
+
   /**
    * @description 获取小部件的事件配置信息
    * @returns {*}
