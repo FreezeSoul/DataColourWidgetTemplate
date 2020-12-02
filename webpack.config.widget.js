@@ -9,8 +9,8 @@ const SRC_ROOT = path.resolve(__dirname, "src");
 const DIST_ROOT = path.resolve(__dirname, "dist");
 
 module.exports = (env, argv) => {
-  let widgetName = "widget";
-  if (argv.name) widgetName = argv.name;
+  let widgetPath = "widget";
+  if (argv.path) widgetPath = argv.path;
 
   const devMode = argv.mode === "development";
   const config = merge(baseConfig(env, argv), {
@@ -18,10 +18,10 @@ module.exports = (env, argv) => {
     entry: {},
     output: {
       path: DIST_ROOT,
-      library: widgetName,
+      library: widgetPath,
       libraryTarget: "umd",
       umdNamedDefine: true,
-      filename: "widgets/" + widgetName + "/bootstrap.js"
+      filename: "widgets/" + widgetPath + "/bootstrap.js"
     },
     devServer: {
       port: 8088
@@ -35,16 +35,16 @@ module.exports = (env, argv) => {
         { from: "./widgets/import.json", to: "./widgets/import.json" },
         { from: "./widgets/shared", to: "./widgets/shared" },
         {
-          from: "./widgets/" + widgetName + "/assets",
-          to: "./widgets/" + widgetName + "/assets"
+          from: "./widgets/" + widgetPath + "/assets",
+          to: "./widgets/" + widgetPath + "/assets"
         },
         {
-          from: "./widgets/" + widgetName + "/manifest.json",
-          to: "./widgets/" + widgetName + "/manifest.json"
+          from: "./widgets/" + widgetPath + "/manifest.json",
+          to: "./widgets/" + widgetPath + "/manifest.json"
         },
         {
-          from: "./widgets/" + widgetName + "/property.json",
-          to: "./widgets/" + widgetName + "/property.json"
+          from: "./widgets/" + widgetPath + "/property.json",
+          to: "./widgets/" + widgetPath + "/property.json"
         }
       ])
     ],
@@ -54,14 +54,14 @@ module.exports = (env, argv) => {
           test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf)$/,
           loader:
             "url-loader?limit=100000&name=widgets/" +
-            widgetName +
+            widgetPath +
             "/assets/[name].[hash].[ext]"
         }
       ]
     }
   });
 
-  config.entry[widgetName] = "./widgets/" + widgetName + "/widget.ts";
+  config.entry[widgetPath] = "./widgets/" + widgetPath + "/widget.ts";
 
   if (devMode) {
     config.devtool = "inline-source-map";
