@@ -21,44 +21,52 @@ module.exports = (env, argv) => {
       library: widgetPath,
       libraryTarget: "umd",
       umdNamedDefine: true,
-      filename: "widgets/" + widgetPath + "/bootstrap.js"
+      filename: "widgets/" + widgetPath + "/bootstrap.js",
     },
     devServer: {
-      port: 8088
+      port: 8088,
     },
     /*externals: {
 		'jquery': 'jQuery'
     },*/
     plugins: [
-      new CopyPlugin([
-        { from: "./widgets/widgets.json", to: "./widgets/widgets.json" },
-        { from: "./widgets/import.json", to: "./widgets/import.json" },
-        { from: "./widgets/shared", to: "./widgets/shared" },
-        {
-          from: "./widgets/" + widgetPath + "/assets",
-          to: "./widgets/" + widgetPath + "/assets"
-        },
-        {
-          from: "./widgets/" + widgetPath + "/manifest.json",
-          to: "./widgets/" + widgetPath + "/manifest.json"
-        },
-        {
-          from: "./widgets/" + widgetPath + "/property.json",
-          to: "./widgets/" + widgetPath + "/property.json"
-        }
-      ])
+      new CopyPlugin({
+        patterns: [
+          { from: "./widgets/widgets.json", to: "./widgets/widgets.json" },
+          { from: "./widgets/import.json", to: "./widgets/import.json" },
+          { from: "./widgets/shared" + (devMode ? "" : "/property"), to: "./widgets/shared" + (devMode ? "" : "/property") },
+          {
+            from: "./widgets/" + widgetPath + "/assets",
+            to: "./widgets/" + widgetPath + "/assets",
+          },
+          {
+            from: "./widgets/" + widgetPath + "/manifest.json",
+            to: "./widgets/" + widgetPath + "/manifest.json",
+          },
+          {
+            from: "./widgets/" + widgetPath + "/property.json",
+            to: "./widgets/" + widgetPath + "/property.json",
+          },
+        ],
+      }),
     ],
     module: {
       rules: [
         {
           test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf)$/,
-          loader:
-            "url-loader?limit=100000&name=widgets/" +
-            widgetPath +
-            "/assets/[name].[hash].[ext]"
-        }
-      ]
-    }
+          //loader: "url-loader?limit=100000&name=widgets/" + widgetPath + "/assets/[name].[hash].[ext]",
+          use: [
+            {
+              loader: "url-loader",
+              options: {
+                limit: 100000,
+                name: "widgets/" + widgetPath + "/assets/[name].[fullhash].[ext]",
+              },
+            },
+          ],
+        },
+      ],
+    },
   });
 
   config.entry[widgetPath] = "./widgets/" + widgetPath + "/widget.ts";

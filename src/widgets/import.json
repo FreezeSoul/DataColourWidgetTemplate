@@ -1,15 +1,21 @@
 {
-  "imports": {
-    "d3": "./shared/library/node_modules/d3/dist/d3.min.js",
-    "g2": "./shared/library/node_modules/@antv/g2/build/g2.js",
-    "g6": "./shared/library/node_modules/@antv/g6/build/g6.js",
-    "three": "./shared/library/node_modules/three/build/three.min.js",
-    "raphael": "./shared/library/node_modules/raphael/raphael.min.js",
-    "echarts": "./shared/library/node_modules/echarts/dist/echarts.min.js",
-    "createjs": "./shared/library/node_modules/createjs/builds/1.0.0/createjs.min.js",
-    "highcharts": "./shared/library/node_modules/highcharts/highcharts.js",
-    "highcharts-more": "./shared/library/node_modules/highcharts/highcharts-more.js",
-    "echarts-gl": "./shared/library/node_modules/echarts-gl/dist/echarts-gl.min.js",
-    "rekapi": "./shared/library/node_modules/rekapi/dist/rekapi.js"
+    "imports": {
+      "d3": "./shared/library/node_modules/d3/dist/d3.min.js",
+      "g2": "./shared/library/node_modules/@antv/g2/dist/g2.min.js",
+      "g6": "./shared/library/node_modules/@antv/g6/dist/g6.min.js",
+      "gojs": "./shared/library/node_modules/gojs/release/go.js",
+      "gsap": "./shared/library/node_modules/gsap/dist/gsap.min.js",
+      "three": "./shared/library/node_modules/three/build/three.min.js",
+      "rekapi": "./shared/library/node_modules/rekapi/dist/rekapi.js",
+      "raphael": "./shared/library/node_modules/raphael/raphael.min.js",
+      "echarts": "./shared/library/node_modules/echarts/dist/echarts.min.js",
+      "soundjs": "./shared/library/node_modules/soundjs/lib/soundjs.min.js",
+      "tweenjs": "./shared/library/node_modules/tweenjs/lib/tweenjs.min.js",
+      "preloadjs": "./shared/library/node_modules/preloadjs/lib/preloadjs.min.js",
+      "createjs": "./shared/library/node_modules/createjs/builds/1.0.0/createjs.min.js",
+      "echarts-gl": "./shared/library/node_modules/echarts-gl/dist/echarts-gl.min.js",
+      "highcharts": "./shared/library/node_modules/highcharts/highcharts.js",
+      "highcharts-more": "./shared/library/node_modules/highcharts/highcharts-more.js"
+    }
   }
-}
+  

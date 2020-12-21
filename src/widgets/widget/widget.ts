@@ -5,8 +5,8 @@ import { ApiPageInterface } from "@interfaces/apiPageInterface";
 import { ApiWidgetInterface } from "@interfaces/apiWidgetInterface";
 
 //import * as a from "module";
-//import templateString from "./assets/template.html";
 import "./assets/widget.less";
+import templateString from "./assets/template.html";
 
 export default class WidgetSimple implements WidgetInterface {
   pageApi: ApiPageInterface;
@@ -27,16 +27,11 @@ export default class WidgetSimple implements WidgetInterface {
 
   constructor() {}
 
-  private templateString: string;
-
-  private amdModule: any;
+  //private amdModule: any;
 
   public async init(container: HTMLElement) {
     this.container = container;
-    this.templateString = (
-      await import(/* webpackChunkName: "template" */ "./assets/template.html")
-    ).default;
-    return await new Promise(resolve => {
+    return await new Promise<void>(resolve => {
       /*System.import("amdModule").then((amdModule: any) => {
         this.amdModule = amdModule;
         resolve();
@@ -59,7 +54,7 @@ export default class WidgetSimple implements WidgetInterface {
   }
 
   public render() {
-    $(this.container).html(this.templateString);
+    $(this.container).html(templateString);
   }
 
   public resize() {}

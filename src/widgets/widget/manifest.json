@@ -1,5 +1,6 @@
 {
   "id": "widget",
+  "tag": "Test",
   "name": "测试控件",
   "icon": "assets/widget.png",
   "author": "FreezeSoul<freezesoul@gmail.com>",
