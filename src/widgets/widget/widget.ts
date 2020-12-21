@@ -1,5 +1,3 @@
-/// <reference path="../../typings/index.d.ts"/>
-/// <reference path="../../typings/htmlimp.d.ts"/>
 import { WidgetInterface } from "@interfaces/widgetInterface";
 import { ApiPageInterface } from "@interfaces/apiPageInterface";
 import { ApiWidgetInterface } from "@interfaces/apiWidgetInterface";

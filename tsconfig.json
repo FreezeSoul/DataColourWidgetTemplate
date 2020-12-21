@@ -1,24 +1,23 @@
 {
-    "compilerOptions": {
-      "baseUrl": "./src",
-      "outDir": "./dist",
-      "target": "es2015",
-      "module": "esnext",
-      "moduleResolution": "node",
-      "strict": true,
-      "allowJs": true,
-      "sourceMap": true,
-      "importHelpers": true,
-      "noImplicitAny": false,
-      "strictNullChecks": false,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "strictPropertyInitialization": false,
-      "lib": ["dom", "es5", "es2015.promise"],
-      "paths": {
-        "@interfaces/*": ["interfaces/*"]
-      }
-    },
-    "exclude": ["dist", "node_modules", "src/widgets/**/assets/**/*", "src/widgets/shared/**/*", "**/node_modules/**/*"]
-  }
-  
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "target": "es2015",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "lib": ["dom", "es5", "es2015.promise"],
+    "paths": {
+      "@interfaces/*": ["interfaces/*"]
+    }
+  },
+  "exclude": ["dist", "node_modules", "src/widgets/**/assets/**/*", "src/widgets/shared/**/*", "**/node_modules/**/*"]
+}
