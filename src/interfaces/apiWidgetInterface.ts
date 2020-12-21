@@ -28,7 +28,7 @@ export interface ApiWidgetInterface {
    */
   hideWidget();
 
-   /**
+  /**
    * @description 获取部件HTMLDOM对象
    * @returns {HTMLElement}
    * @memberof ApiWidgetInterface
@@ -48,6 +48,27 @@ export interface ApiWidgetInterface {
    * @memberof ApiWidgetInterface
    */
   getWidget(): WidgetInterface;
+
+  /**
+   * @description 获取aliasName
+   * @returns {string}
+   * @memberof ApiWidgetInterface
+   */
+  getAliasName(): string;
+
+  /**
+   * @description 获取groupname
+   * @returns {string}
+   * @memberof ApiWidgetInterface
+   */
+  getGroupName(): string;
+
+  /**
+   * @description 获取classname
+   * @returns {string}
+   * @memberof ApiWidgetInterface
+   */
+  getClassName(): string;
 
   /**
    * @description 获取小部件目录
@@ -74,6 +95,20 @@ export interface ApiWidgetInterface {
     schema: string;
     binding: { text?: string; list?: Array<string>; category?: string; value?: Array<string> };
   }>;
+
+  /**
+   * @description 根据绑定名称获取缓存数据
+   * @param bindingName
+   * @memberof ApiWidgetInterface
+   */
+  getDataByBinding(
+    bindingName: string
+  ): {
+    datasetId: string;
+    datasetName: string;
+    data: Array<any>;
+    success: boolean;
+  };
 
   /**
    * @description 触发绑定事件

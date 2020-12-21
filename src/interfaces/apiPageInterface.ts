@@ -29,7 +29,7 @@ export interface ApiPageInterface {
    * @memberof ApiPageInterface
    */
   getStagePath(stageId: string, variables?: Array<{ name: string; value: string }>): string;
-  
+
   /**
    * @description 获取小部件根目录
    * @returns {string}
@@ -52,15 +52,22 @@ export interface ApiPageInterface {
   getApiWidgetById(id: string): ApiWidgetInterface;
 
   /**
-   * @description 根据ClassName获取小部件API对象
+   * @description 根据别名获取小部件API对象
    * @returns {ApiWidgetInterface}
+   * @memberof ApiPageInterface
+   */
+  getApiWidgetByAliasName(aliasName: string): ApiWidgetInterface;
+
+  /**
+   * @description 根据ClassName获取小部件API对象
+   * @returns {Array<ApiWidgetInterface>}
    * @memberof ApiPageInterface
    */
   getApiWidgetsByClassName(className: string): Array<ApiWidgetInterface>;
 
   /**
    * @description 根据GroupName获取小部件API对象
-   * @returns {ApiWidgetInterface}
+   * @returns {Array<ApiWidgetInterface>}
    * @memberof ApiPageInterface
    */
   getApiWidgetsByGroupName(groupName: string): Array<ApiWidgetInterface>;
@@ -79,6 +86,13 @@ export interface ApiPageInterface {
    * @memberof ApiPageInterface
    */
   setVariables(variables?: Array<{ name: string; value: string }>);
+
+  /**
+   * @description 设置变量
+   * @returns {Array<{ name: string; value: string }>}
+   * @memberof ApiPageInterface
+   */
+  getVariables(): Array<{ name: string; value: string }>;
 
   /**
    * @description 获取缓存数据
@@ -129,16 +143,7 @@ export interface ApiPageInterface {
    * @param {string} constant
    * @memberof ApiPageInterface
    */
-  subscribePushData(
-    datasetId: string,
-    constant: string,
-    callback: (data: {
-      datasetId: string;
-      datasetName: string;
-      data: Array<any>;
-      success: boolean;
-    }) => void
-  );
+  subscribePushData(datasetId: string, constant: string, callback: (data: { datasetId: string; datasetName: string; data: Array<any>; success: boolean }) => void);
 
   /**
    * @description 检测插件存在
