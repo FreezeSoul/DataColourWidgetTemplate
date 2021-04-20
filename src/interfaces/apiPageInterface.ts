@@ -22,6 +22,13 @@ export interface ApiPageInterface {
   getCorePath(): string;
 
   /**
+   * @description 获取系统信息对象
+   * @returns {Object}
+   * @memberof ApiPageInterface
+   */
+  getSysInfo(): { accessToken: string; stageId: string; tenantId: string; variables: any; isEdit: boolean; version: string };
+
+  /**
    * @description 获取场景路径
    * @param stageId
    * @param variables
